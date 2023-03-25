@@ -1,0 +1,103 @@
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 0.0625rem;
+  height: 0.0625rem;
+  padding: 0;
+  border: 0;
+}
+
+.page {
+  position: relative;
+}
+
+.lock {
+  overflow: hidden;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.card {
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+.card__title {
+  text-align: center;
+}
+.card .img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.background--active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.5);
+  transition-duration: 0.5s;
+  z-index: 2;
+}
+
+.modal {
+  max-width: 100%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  gap: 15px;
+  padding: 10px;
+}
+.modal--none {
+  display: none;
+}
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.modal__form label {
+  font-weight: 700;
+}
+.modal__form input {
+  border: none;
+}
+
+.button {
+  position: fixed;
+  left: 50%;
+  top: 5%;
+  background-color: aqua;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 20px;
+  transform: translate(-50%, 0);
+  cursor: pointer;
+}
+.button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
